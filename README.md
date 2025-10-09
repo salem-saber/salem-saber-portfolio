@@ -1,36 +1,243 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Salem Saber - Senior Backend Engineer Portfolio
 
-## Getting Started
+A modern, responsive portfolio website showcasing my expertise as a Senior Backend Engineer with 9 years of experience in PHP, Laravel, and scalable system architecture.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[View Portfolio](https://salemsaber.com)
+
+## 📋 About
+
+This portfolio showcases my professional journey, technical skills, and achievements as a Senior Backend Engineer. Built with modern web technologies to demonstrate both my technical capabilities and attention to design details.
+
+### Key Highlights
+- 9+ years of backend engineering experience
+- 500+ successful projects delivered
+- 99.99% system uptime achieved
+- 180% improvement in delivery times
+
+## 🛠️ Technologies Used
+
+### Frontend
+- **Next.js 15.5.4** - React framework for production
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
+- **React Type Animation** - Typewriter effect animations
+- **React Intersection Observer** - Scroll-based animations
+
+### Icons & Assets
+- **Heroicons** - Beautiful hand-crafted SVG icons
+- **Next.js Image Optimization** - Optimized image loading
+
+### Development Tools
+- **ESLint** - Code linting and formatting
+- **PostCSS** - CSS processing
+- **npm** - Package management
+
+## ✨ Features
+
+### 🎨 Design & UI
+- **Responsive Design** - Optimized for all device sizes
+- **Modern Dark Theme** - Professional blue-purple color scheme
+- **Smooth Animations** - Engaging user interactions with Framer Motion
+- **Typewriter Effects** - Dynamic text animations
+- **Scroll Animations** - Content reveals on scroll
+
+### 📱 Navigation
+- **Fixed Navigation Bar** - Always accessible navigation
+- **Smooth Scrolling** - Seamless section transitions
+- **Mobile-Friendly Menu** - Collapsible mobile navigation
+- **Active Section Highlighting** - Visual feedback for current section
+
+### 📄 Content Sections
+- **Hero Section** - Dynamic introduction with contact information
+- **About Me** - Professional background with statistics and education
+- **Skills** - Technical expertise organized by categories
+- **Experience** - Detailed work history with achievements
+- **Contact** - Multiple ways to connect (Email, Phone, LinkedIn, GitHub)
+
+### 📥 Interactive Features
+- **CV Download** - Direct download of PDF resume
+- **Contact Links** - Direct links to email, phone, LinkedIn, and GitHub
+- **Responsive Images** - Optimized loading and display
+- **Form Interactions** - Smooth hover and click animations
+
+## 🏗️ Project Structure
+
+```
+salem-saber/
+├── src/
+│   ├── app/
+│   │   ├── globals.css          # Global styles
+│   │   ├── layout.tsx           # Root layout component
+│   │   └── page.tsx             # Main page component
+│   └── components/
+│       ├── About.tsx            # About section
+│       ├── Contact.tsx          # Contact section
+│       ├── Experience.tsx       # Professional experience
+│       ├── Hero.tsx             # Hero/landing section
+│       ├── Navigation.tsx       # Navigation component
+│       └── Skills.tsx           # Skills showcase
+├── public/
+│   ├── salem-saber.jpg          # Profile image
+│   ├── Salem Saber - Senior Backend Engineer.pdf  # CV file
+│   └── *.svg                    # Various icons
+├── out/                         # Generated static files (after build)
+├── next.config.ts               # Next.js configuration
+├── tailwind.config.ts           # Tailwind CSS configuration
+├── tsconfig.json               # TypeScript configuration
+└── package.json                # Dependencies and scripts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/salem-saber/salem-saber-portfolio.git
+   cd salem-saber-portfolio
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open in browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
+### Available Scripts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production and generate static export
+- `npm run start` - Start production server (if not using static export)
+- `npm run lint` - Run ESLint for code quality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Deployment
+
+This portfolio is configured for static export, making it deployable to any static hosting service.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The static files will be generated in the `out/` directory.
+
+### Deployment Options
+
+#### Netlify
+1. Build the project: `npm run build`
+2. Drag and drop the `out/` folder to Netlify
+
+#### Vercel
+1. Connect your GitHub repository
+2. Vercel will automatically detect Next.js and deploy
+
+#### GitHub Pages
+1. Build the project: `npm run build`
+2. Push the `out/` directory contents to your gh-pages branch
+
+#### AWS S3 / CloudFront
+1. Build the project: `npm run build`
+2. Upload the `out/` directory contents to your S3 bucket
+
+## 🎨 Customization
+
+### Colors
+The portfolio uses a blue-purple color scheme defined in Tailwind CSS:
+- Primary: `blue-500` to `purple-600`
+- Secondary: `blue-400`
+- Background: `slate-800`, `slate-900`
+
+### Content Updates
+- Update personal information in `src/components/Hero.tsx`
+- Modify experience data in `src/components/Experience.tsx`
+- Update skills in `src/components/Skills.tsx`
+- Change about content in `src/components/About.tsx`
+- Update contact information in `src/components/Contact.tsx`
+
+### Assets
+- Replace `public/salem-saber.jpg` with your profile image
+- Replace `public/Salem Saber - Senior Backend Engineer.pdf` with your CV
+- Update favicon and other icons in the `public/` directory
+
+## 🔧 Configuration
+
+### Next.js Configuration
+The project is configured for static export in `next.config.ts`:
+
+```typescript
+const nextConfig: NextConfig = {
+    output: 'export', // Enables static export
+    images: {
+        unoptimized: true, // Required for static export
+    },
+};
+```
+
+### Tailwind CSS
+Custom configuration in `tailwind.config.ts` for animations and theme extensions.
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Build Errors**
+   - Ensure all dependencies are installed: `npm install`
+   - Check for TypeScript errors: `npm run lint`
+
+2. **Images Not Loading**
+   - Verify image paths in `public/` directory
+   - Check Next.js image configuration
+
+3. **Mobile Navigation Issues**
+   - Clear browser cache
+   - Verify JavaScript is enabled
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+While this is a personal portfolio, suggestions and feedback are welcome! Feel free to:
+
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+
+## 📞 Contact
+
+**Salem Saber** - Senior Backend Engineer
+
+- 📧 Email: [salem.saber97@gmail.com](mailto:salem.saber97@gmail.com)
+- 📱 Phone: [+20 114 036 6864](tel:+201140366864)
+- 💼 LinkedIn: [salem-saber](https://linkedin.com/in/salem-saber)
+- 🐱 GitHub: [salem-saber](https://github.com/salem-saber)
+
+---
+
+**Built with ❤️ using Next.js, TypeScript, and Tailwind CSS**
+
+*Last updated: October 2025*
