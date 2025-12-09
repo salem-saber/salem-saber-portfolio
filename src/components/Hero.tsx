@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { TypeAnimation } from 'react-type-animation'
 import { ArrowDownIcon } from '@heroicons/react/24/outline'
 import { useState, useEffect } from 'react'
+import useMounted from '@/hooks/useMounted'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -34,6 +35,8 @@ const Hero = () => {
     }))
     setParticles(generatedParticles)
   }, [])
+
+  const mounted = useMounted()
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -85,24 +88,28 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mb-8"
           >
-            <div className="text-2xl md:text-4xl text-gray-300 mb-6 h-20 flex items-center justify-center">
-              <TypeAnimation
-                sequence={[
-                  'Senior Backend Engineer',
-                  2000,
-                  'PHP & Laravel Expert',
-                  2000,
-                  'Scalable Systems Architect',
-                  2000,
-                  'Performance Optimization Specialist',
-                  2000,
-                  'CI/CD Pipeline Expert',
-                  2000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
+            <div suppressHydrationWarning className="text-2xl md:text-4xl text-gray-300 mb-6 h-20 flex items-center justify-center">
+              {mounted ? (
+                <TypeAnimation
+                  sequence={[
+                    'Senior Backend Engineer',
+                    2000,
+                    'PHP & Laravel Expert',
+                    2000,
+                    'Scalable Systems Architect',
+                    2000,
+                    'Performance Optimization Specialist',
+                    2000,
+                    'CI/CD Pipeline Expert',
+                    2000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
+              ) : (
+                <span>Senior Backend Engineer</span>
+              )}
             </div>
           </motion.div>
 

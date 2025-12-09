@@ -3,12 +3,16 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Image from 'next/image'
+import stats from '@/data/stats'
+import useMounted from '@/hooks/useMounted'
 
 const About = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
   })
+
+  const mounted = useMounted()
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -29,13 +33,6 @@ const About = () => {
     }
   }
 
-  const stats = [
-    { number: '9+', label: 'Years Experience' },
-    { number: '500+', label: 'Successful Projects' },
-    { number: '99.99%', label: 'System Uptime' },
-    { number: '180%', label: 'Delivery Improvement' }
-  ]
-
   return (
     <section id="about" className="py-20 bg-slate-800/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,7 +40,7 @@ const About = () => {
           ref={ref}
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={mounted && inView ? "visible" : "hidden"}
           className="grid lg:grid-cols-2 gap-12 items-center"
         >
           {/* Image Section */}
