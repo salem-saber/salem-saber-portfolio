@@ -119,16 +119,10 @@ const About = () => {
 
             {/* Buttons */}
             <motion.div variants={itemVariants} className="pt-6 flex gap-4">
-              <button
-                onClick={() => document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                View Experience
-              </button>
               <a
                 href="/Salem Saber - Senior Backend Engineer.pdf"
                 download="Salem Saber - Senior Backend Engineer.pdf"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-block"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-12 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-block"
               >
                 Download CV
               </a>

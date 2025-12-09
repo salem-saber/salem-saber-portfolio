@@ -89,17 +89,6 @@ const Experience = () => {
                     </li>
                   ))}
                 </ul>
-
-                <div className="flex flex-wrap gap-2">
-                  {experience.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </motion.div>
             ))}
           </div>

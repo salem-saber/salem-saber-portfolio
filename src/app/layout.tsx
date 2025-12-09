@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Salem Saber - Senior Backend Engineer Portfolio",
+    title: "Salem Saber - Senior Backend Engineer",
     description:
         "Senior Backend Engineer with 9 years of experience in PHP, Laravel, and scalable system architecture. Expert in DevOps, CI/CD, and high-performance backend solutions.",
     keywords: [

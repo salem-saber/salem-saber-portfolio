@@ -9,8 +9,7 @@ const experiences = [
       'Interact with hardware and software to produce real time results',
       'Lead backend development initiatives using modern PHP frameworks',
       'Collaborate with cross-functional teams to deliver scalable solutions'
-    ],
-    technologies: ['PHP', 'Laravel', 'MySQL', 'Redis', 'Docker', 'AWS']
+    ]
   },
   {
     title: 'Senior Backend Engineer',
@@ -23,7 +22,6 @@ const experiences = [
       'Implemented a scalable backend architecture that supported a 300% increase in user traffic over 6 months',
       'Ensured seamless user experience during rapid growth phases'
     ],
-    technologies: ['PHP', 'Laravel', 'PostgreSQL', 'MongoDB', 'Redis', 'Docker', 'AWS']
   },
   {
     title: 'Backend Engineer',
@@ -36,7 +34,6 @@ const experiences = [
       'Identified cost-saving measures, reducing infrastructure costs by 50% while maintaining optimal system performance',
       'Established robust CI/CD pipelines for faster deployment cycles'
     ],
-    technologies: ['PHP', 'Laravel', 'CodeIgniter', 'MySQL', 'Redis', 'Docker', 'CI/CD']
   },
   {
     title: 'Backend Engineer',
@@ -49,7 +46,6 @@ const experiences = [
       'Implemented performance monitoring and optimization strategies',
       'Built robust APIs for financial data processing'
     ],
-    technologies: ['PHP', 'MySQL', 'Redis', 'Linux', 'Performance Optimization']
   },
   {
     title: 'Backend Engineer',
@@ -62,7 +58,6 @@ const experiences = [
       'Established a robust continuous integration and continuous deployment (CI/CD) pipeline, reducing release features in 2 weeks',
       'Built scalable web applications from scratch using custom PHP frameworks'
     ],
-    technologies: ['PHP', 'MySQL', 'Custom Framework', 'Linux', 'Git']
   }
 ]
 
