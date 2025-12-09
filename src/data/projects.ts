@@ -37,5 +37,4 @@ const projects: Project[] = [
   }
 ]
 
-// Provide a default export for simpler imports and to avoid some tooling warnings
 export default projects

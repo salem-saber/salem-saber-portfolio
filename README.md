@@ -72,23 +72,82 @@ salem-saber/
 │   │   ├── globals.css          # Global styles
 │   │   ├── layout.tsx           # Root layout component
 │   │   └── page.tsx             # Main page component
-│   └── components/
-│       ├── About.tsx            # About section
-│       ├── Contact.tsx          # Contact section
-│       ├── Experience.tsx       # Professional experience
-│       ├── Hero.tsx             # Hero/landing section
-│       ├── Navigation.tsx       # Navigation component
-│       └── Skills.tsx           # Skills showcase
+│   ├── components/              # UI components used across the site
+│   │   ├── About.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── Projects.tsx         # Projects list + modal logic (client component)
+│   │   ├── ProjectCard.tsx      # Individual project card
+│   │   └── Skills.tsx
+│   ├── data/                    # All site data lives here (projects, skills, experiences, contact)
+│   │   ├── projects.ts
+│   │   ├── experiences.ts
+│   │   ├── skills.ts
+│   │   └── contact.tsx
+│   ├── hooks/
+│   │   └── useMounted.ts
+│   └── lib/                     # Small utilities and helpers
 ├── public/
-│   ├── salem-saber.jpg          # Profile image
-│   ├── Salem Saber - Senior Backend Engineer.pdf  # CV file
+│   ├── projects/                # Product images organized by product id
+│   ├── profile-image.jpg          # Profile image
+│   ├── CV.pdf  # CV file
 │   └── *.svg                    # Various icons
 ├── out/                         # Generated static files (after build)
 ├── next.config.ts               # Next.js configuration
+├── postcss.config.mjs
 ├── tailwind.config.ts           # Tailwind CSS configuration
-├── tsconfig.json               # TypeScript configuration
-└── package.json                # Dependencies and scripts
+├── tsconfig.json                # TypeScript configuration
+└── package.json                 # Dependencies and scripts
 ```
+
+## 🚀 Projects
+
+Projects are defined in `src/data/projects.ts` and images for each project are stored under `public/projects/{productId}/`.
+
+Example project data shape (edit `src/data/projects.ts`):
+
+```ts
+export type Project = {
+  id: string; // used as folder name under public/projects/
+  title: string;
+  description: string;
+  stack: string[];
+  link?: string; // optional external link
+  images?: string[]; // relative paths like '/projects/1/1.png'
+  featured?: boolean;
+};
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Portfolio Website',
+    description: 'Personal portfolio built with Next.js and TypeScript.',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    link: 'https://salemsaber.com',
+    images: ['/projects/1/1.png', '/projects/1/2.png'],
+    featured: true,
+  },
+  // ...add more projects
+];
+```
+
+How to add a new project:
+
+1. Add images to `public/projects/{newId}/` (for example `public/projects/3/1.png`).
+2. Add a new project object to `src/data/projects.ts` using the `id` that matches the image folder.
+3. Restart the dev server if needed: `npm run dev`.
+
+Notes about making project items open a popup/modal:
+
+- Components that use browser-only hooks (like `useRef`, `useState`, `useEffect`) must be client components. Add `"use client"` at the top of `src/components/Projects.tsx`.
+- Ensure React hooks are imported where used, for example:
+  `import React, { useRef, useState, useEffect } from 'react';`
+- A simple modal pattern:
+  - Keep `selectedProject` in state (e.g. `const [selectedProject, setSelectedProject] = useState<Project | null>(null)`).
+  - When a project card is clicked, call `setSelectedProject(project)` and render a modal showing `selectedProject` details and images.
+  - Close the modal by setting `setSelectedProject(null)` or clicking a backdrop.
 
 ## 🚀 Getting Started
 
