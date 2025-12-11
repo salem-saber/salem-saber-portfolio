@@ -59,7 +59,7 @@ const Navigation = () => {
             className="text-2xl font-bold text-white cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            &lt;Dev/&gt;
+            <span> Salem Saber</span>
           </motion.div>
 
           {/* Desktop Menu */}
